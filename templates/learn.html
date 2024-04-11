@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='learn.css') }}">
+</head>
+<body>
+
+<br><br>
+<h1>{{ data.name }}</h1>
+
+<h2>Ingredients:</h2>
+<br>
+<ul>
+    {% for ingredient in data.ingredients %}
+    <li>{{ ingredient }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Preparation:</h2>
+<br>
+<ol>
+    {% for step in data.preparation_steps %}
+    <li>{{ step }}</li>
+    {% endfor %}
+</ol>
+
+<br><br>
+{% if next_lesson == None %}
+    <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
+    <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
+{% else %}
+    <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
+    <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
+    <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a>
+{% endif %}
+</body>
+</html>
