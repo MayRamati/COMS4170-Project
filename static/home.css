@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -23,19 +24,21 @@ h1 {
     font-weight: bold;
     color: #FFFFFF;
     margin-bottom: 20px;
+
 }
 
 .description {
     font-size: 24px;
     color: #FFFFFF;
     margin-bottom: 40px;
+    padding-left: 100px;
 }
 
 #startButton {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: #D9AB91;
     border: none;
     border-radius: 5px;
     padding: 15px 30px;
@@ -44,5 +47,6 @@ h1 {
 }
 
 #startButton:hover {
-    background-color: #0056b3;
+    background-color: navajowhite;
 }
+

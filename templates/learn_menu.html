@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='learn_menu.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mt-5 mb-4">Learning</h1>
+    <div class="row">
+        {% for lesson in learning %}
+            <div class="col-md-4 mb-4">
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <img src="{{ lesson.image_url }}" class="card-img-top" alt="{{ lesson.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ lesson.name }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="{{ url_for('static', filename='learn_menu.js') }}"></script>
+</body>
+</html>
+
+{% endblock %}

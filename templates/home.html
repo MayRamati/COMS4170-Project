@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% block content %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +13,9 @@
 
 <div class="container">
     <div class="text-right">
-        <h1>Easy Home Made Cocktails</h1>
+        <h1>Easy Homemade Cocktails</h1>
         <p class="description">Start your journey to learn how to make delicious cocktails at home</p>
-        <a href="/learn/1" class="btn btn-primary" id="startButton">Start</a>
+        <a href="/learn_menu" class="btn btn-primary" id="startButton">Start</a>
     </div>
 </div>
 
@@ -23,3 +25,4 @@
 
 </body>
 </html>
+{% endblock %}

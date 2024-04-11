@@ -71,6 +71,11 @@ lessons = {
 def home():
     return render_template('home.html')
 
+# Learn menu route
+@app.route('/learn_menu')
+def learn_menu():
+    return render_template('learn_menu.html', lessons=lessons)
+
 # Learning route
 @app.route('/learn/<int:lesson_number>', methods=['GET', 'POST'])
 def learn(lesson_number):

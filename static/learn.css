@@ -12,19 +12,17 @@ body {
 }
 
 .container {
-    max-width: 900px; /* Increased container width */
-    margin: 50px auto; /* Centering the container */
-    padding: 20px;
+    max-width: 900px;
 }
 
 h1 {
-    font-size: 42px; /* Increased font size */
+    font-size: 42px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 28px; /* Increased font size */
+    font-size: 28px;
     font-weight: bold;
     margin-top: 20px;
 }
@@ -32,22 +30,23 @@ h2 {
 ul, ol {
     margin-bottom: 20px;
     text-align: center;
+    list-style-type: none;
 }
 
 li {
-    font-size: 20px; /* Increased font size */
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .button-group {
     display: flex;
-    justify-content: space-between; /* Align buttons to left and right */
+    justify-content: space-between;
     margin-top: 30px;
 }
 
 .btn {
-    padding: 12px 24px; /* Increased padding */
-    font-size: 20px; /* Increased font size */
+    padding: 12px 24px;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
@@ -62,11 +61,11 @@ li {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #D9AB91;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: bisque;
 }
 .lesson-image {
     max-width: 20%;
