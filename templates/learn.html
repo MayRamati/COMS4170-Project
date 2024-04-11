@@ -9,7 +9,7 @@
 
 <br><br>
 <h1>{{ data.name }}</h1>
-
+<img src="{{ url_for('static', filename='img/' + data.image) }}" alt="{{ data.name }} Image" class="lesson-image">
 <h2>Ingredients:</h2>
 <br>
 <ul>

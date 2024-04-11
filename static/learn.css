@@ -68,3 +68,10 @@ li {
 .btn:hover {
     background-color: #0056b3;
 }
+.lesson-image {
+    max-width: 20%;
+    max-height: 20%;
+    display: block;
+    margin: auto;
+}
+

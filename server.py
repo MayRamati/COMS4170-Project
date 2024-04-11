@@ -15,7 +15,8 @@ lessons = {
             "Throw a bunch of mint leaves in.",
             "Stir.",
             "Drink!"
-        ]
+        ],
+        "image": "learn1.jpeg"
     },
     2: {
         "name": "Lose Control",
@@ -25,7 +26,8 @@ lessons = {
             "Pour in two shots vodka.",
             "Fill the rest with redbull.",
             "Salute!"
-        ]
+        ],
+        "image": "learn2.jpeg"
     },
     3: {
         "name": "House Blend",
@@ -36,7 +38,8 @@ lessons = {
             "Fill with orange juice till ¾ of the glass is filled.",
             "Cut a slice of orange and lay it down inside the glass.",
             "Call your friends!"
-        ]
+        ],
+        "image": "learn3.jpeg"
     },
     4: {
         "name": "Warm Drinks for Cold Days",
@@ -48,7 +51,8 @@ lessons = {
             "Throw in sliced tiny pieces of peaches.",
             "Heat until boiling",
             "Enjoy! Relax on the couch"
-        ]
+        ],
+        "image": "learn4.jpeg"
     },
     5: {
         "name": "Relax on the couch",
@@ -57,9 +61,11 @@ lessons = {
             "Fill a half glass with champagne/sparkling wine.",
             "Fill the rest with orange juice.",
             "Lay down and relax."
-        ]
+        ],
+        "image": "learn5.jpeg"
     }
 }
+
 
 @app.route('/')
 def home():
@@ -85,7 +91,7 @@ def learn(lesson_number):
 
 
 # Quiz route
-@app.route('/quiz/<int:question_number>')
+@app.route('/quiz/<int:question_number>', methods=['GET', 'POST'])
 def quiz(question_number):
     # Similar to the learning route, handle the question number and render the appropriate template
     return f"Quiz question {question_number}"
