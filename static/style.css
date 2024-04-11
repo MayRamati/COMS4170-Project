@@ -1,0 +1,14 @@
+body {
+    background-color: #f8f9fa;
+}
+.container {
+    text-align: center;
+    margin-top: 300px;
+}
+.description {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#startButton {
+    font-size: 18px;
+}
