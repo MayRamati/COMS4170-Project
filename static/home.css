@@ -1,29 +1,22 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-image: url("img/home.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-.container {
+.container_1 {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     height: 100vh;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 100px;
     font-weight: bold;
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
 }
 
@@ -32,6 +25,7 @@ h1 {
     color: #FFFFFF;
     margin-bottom: 40px;
     padding-left: 100px;
+
 }
 
 #startButton {
@@ -40,13 +34,18 @@ h1 {
     color: #fff;
     background-color: #D9AB91;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 15px 30px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 #startButton:hover {
-    background-color: navajowhite;
+    background-color: #D9BEA7;
 }
+.description-container {
+    margin-left:600px;
+    padding-top: 20px;
+}
+
 
