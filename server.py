@@ -1,5 +1,6 @@
-from flask import Flask, render_template, session
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 import datetime
+from flask import session
 
 app = Flask(__name__)
 app.secret_key = 'COMS4170'
@@ -66,15 +67,104 @@ lessons = {
     }
 }
 
+quizzes = {
+    1: {
+        'questions': [
+            {
+                'text': 'What is the main ingredient in a Coco Loco?',
+                'options': ['Vodka', 'Rum', 'Tequila', 'Whiskey'],
+                'answer': 'Rum'
+            },
+            {
+                'text': 'How much ice is typically used in a Coco Loco?',
+                'options': ['None', 'Cubed', 'Crushed', 'As desired'],
+                'answer': 'As desired'
+            },
+            {
+                'text': 'Which fruit is used in a Coco Loco?',
+                'options': ['Lemon', 'Orange', 'Grapefruit', 'Lime'],
+                'answer': 'Grapefruit'
+            }
+        ]
+    },
+    2: {
+        'questions': [
+            {
+                'text': 'What type of alcohol is mixed with Redbull in Lose Control?',
+                'options': ['Vodka', 'Gin', 'Whiskey', 'Rum'],
+                'answer': 'Vodka'
+            },
+            {
+                'text': 'What is the final gesture suggested in the preparation of Lose Control?',
+                'options': ['Cheers', 'Salute', 'Toast', 'Clap'],
+                'answer': 'Salute'
+            }
+        ]
+    },
+    3: {
+        'questions': [
+            {
+                'text': 'What is the primary alcoholic ingredient in House Blend?',
+                'options': ['Vodka', 'Gin', 'Campari', 'Rum'],
+                'answer': 'Campari'
+            },
+            {
+                'text': 'What type of juice complements Campari in House Blend?',
+                'options': ['Lemon Juice', 'Apple Juice', 'Orange Juice', 'Grapefruit Juice'],
+                'answer': 'Orange Juice'
+            },
+            {
+                'text': 'How many ice cubes are typically used in the House Blend?',
+                'options': ['1-2', '3-4', '5-6', '7-8'],
+                'answer': '3-4'
+            }
+        ]
+    },
+    4: {
+        'questions': [
+            {
+                'text': 'Which fruit is added to the wine and apple juice in Warm Drinks for Cold Days?',
+                'options': ['Peaches', 'Oranges', 'Lemons', 'Apples'],
+                'answer': 'Peaches'
+            },
+            {
+                'text': 'What is the main liquid base in Warm Drinks for Cold Days?',
+                'options': ['Beer', 'Vodka', 'Red Wine', 'Whiskey'],
+                'answer': 'Red Wine'
+            }
+        ]
+    },
+    5: {
+        'questions': [
+            {
+                'text': 'What kind of wine is used in Relax on the couch?',
+                'options': ['Red Wine', 'White Wine', 'Champagne/Sparkling Wine', 'Rose Wine'],
+                'answer': 'Champagne/Sparkling Wine'
+            },
+            {
+                'text': 'What is mixed with the champagne in Relax on the couch?',
+                'options': ['Lemon Juice', 'Apple Juice', 'Grapefruit Juice', 'Orange Juice'],
+                'answer': 'Orange Juice'
+            }
+        ]
+    }
+}
+
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
+
 # Learn menu route
 @app.route('/learn_menu')
 def learn_menu():
     return render_template('learn_menu.html', lessons=lessons)
+
+# Quiz menu route
+@app.route('/quiz_menu')
+def quiz_menu():
+    return render_template('quiz_menu.html', lessons=lessons)
 
 # Learning route
 @app.route('/learn/<int:lesson_number>', methods=['GET', 'POST'])
@@ -90,22 +180,39 @@ def learn(lesson_number):
 
     if lesson:
         print("Session:", session)
-        return render_template('learn.html', data=lesson, previous_lesson=previous_lesson, next_lesson=next_lesson,quiz=quiz)
+        return render_template('learn.html', data=lesson, previous_lesson=previous_lesson, next_lesson=next_lesson, quiz=quiz, lesson_id=lesson_number)
     else:
         return "Lesson not found"
 
 
 # Quiz route
-@app.route('/quiz/<int:question_number>', methods=['GET', 'POST'])
-def quiz(question_number):
-    # Similar to the learning route, handle the question number and render the appropriate template
-    return f"Quiz question {question_number}"
+@app.route('/quiz/<int:quiz_id>', methods=['GET', 'POST'])
+def quiz(quiz_id):
+    if request.method == 'POST':
+        submitted_answers = []
+        for question_index in range(len(quizzes[quiz_id]['questions'])):
+            answer_key = f'question{question_index}'
+            selected_answer = request.args.get(answer_key)
+            submitted_answers.append(selected_answer)
+
+        correct_answers = [q['answer'] for q in quizzes[quiz_id]['questions']]
+        result = sum(1 for sub, cor in zip(submitted_answers, correct_answers) if sub == cor)
+        next_quiz_id = quiz_id + 1 if quiz_id < len(quizzes) else None
+        return jsonify(result=result, total=len(correct_answers), next_quiz_id=next_quiz_id)
+    else:
+        quiz_data = quizzes.get(quiz_id)
+    if quiz_data:
+        next_quiz_id = quiz_id + 1 if quiz_id < len(quizzes) else None
+        return render_template('quiz.html', quiz=quiz_data, quiz_id=quiz_id, next_quiz_id=next_quiz_id)
+    else:
+            return "Quiz not found", 404
 
 # Quiz result page route
 @app.route('/quiz/result')
 def quiz_result():
     # You can handle the quiz result here, calculate the score, and render the result template
     return "Quiz result page"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
