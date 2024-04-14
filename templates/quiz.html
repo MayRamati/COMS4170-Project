@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>Quiz for Lesson {{ quiz_id }}</h1>
+<form id="quizForm" onsubmit="submitQuiz()">
+    {% set outer_index = 0 %}
+    {% for question in quiz.questions %}
+    <fieldset>
+        <legend>{{ question.text }}</legend>
+        {% set outer_index = loop.index0 %}
+        {% for option in question.options %}
+        <input type="radio" id="q{{ outer_index }}-option{{ loop.index0 }}"
+               name="question{{ outer_index }}" value="{{ option }}">
+        <label for="q{{ outer_index }}-option{{ loop.index0 }}">{{ option }}</label><br>
+        {% endfor %}
+    </fieldset>
+    {% endfor %}
+    <button class="btn btn-primary" type="submit">Submit Quiz</button>
+
+    {% if next_quiz_id == None %}
+    <a href="/quiz/result" class="btn btn-primary">Final Score</a>
+    {% else %}
+    <a href="/quiz/{{ next_quiz_id }}" class="btn btn-primary">Next Quiz</a>
+    {% endif %}
+</form>
+<div id="quizResult" style="font-size: 30px; color: black;"></div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='quiz.js') }}"></script>
+{% endblock %}
