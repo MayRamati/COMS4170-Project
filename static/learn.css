@@ -57,15 +57,15 @@ li {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #D9BEA7;
 }
 
 .btn-primary {
-    background-color: #D9AB91;
+    background-color: #D9BEA7;
 }
 
 .btn:hover {
-    background-color: bisque;
+    background-color: #F2DABD;
 }
 .lesson-image {
     max-width: 20%;

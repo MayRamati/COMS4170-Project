@@ -183,36 +183,16 @@ def learn(lesson_number):
         return render_template('learn.html', data=lesson, previous_lesson=previous_lesson, next_lesson=next_lesson, quiz=quiz, lesson_id=lesson_number)
     else:
         return "Lesson not found"
-
-
-# Quiz route
 @app.route('/quiz/<int:quiz_id>', methods=['GET', 'POST'])
-def quiz(quiz_id):
-    if request.method == 'POST':
-        submitted_answers = []
-        for question_index in range(len(quizzes[quiz_id]['questions'])):
-            answer_key = f'question{question_index}'
-            selected_answer = request.args.get(answer_key)
-            submitted_answers.append(selected_answer)
+def quiz_page(quiz_id):
+    if request.method == 'GET':
+        quiz = quizzes.get(quiz_id, {})
+        next_quiz = quiz_id + 1 if quiz_id < len(quizzes) else None
+        return render_template('quiz.html', quiz=quiz, quiz_id=quiz_id, next_quiz=next_quiz)
 
-        correct_answers = [q['answer'] for q in quizzes[quiz_id]['questions']]
-        result = sum(1 for sub, cor in zip(submitted_answers, correct_answers) if sub == cor)
-        next_quiz_id = quiz_id + 1 if quiz_id < len(quizzes) else None
-        return jsonify(result=result, total=len(correct_answers), next_quiz_id=next_quiz_id)
-    else:
-        quiz_data = quizzes.get(quiz_id)
-    if quiz_data:
-        next_quiz_id = quiz_id + 1 if quiz_id < len(quizzes) else None
-        return render_template('quiz.html', quiz=quiz_data, quiz_id=quiz_id, next_quiz_id=next_quiz_id)
-    else:
-            return "Quiz not found", 404
-
-# Quiz result page route
 @app.route('/quiz/result')
-def quiz_result():
-    # You can handle the quiz result here, calculate the score, and render the result template
-    return "Quiz result page"
-
+def submit_total_score():
+    return render_template('result.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
