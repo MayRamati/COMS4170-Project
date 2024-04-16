@@ -72,13 +72,13 @@ quizzes = {
         'questions': [
             {
                 'text': 'What is the main ingredient in a Coco Loco?',
-                'options': ['Vodka', 'Rum', 'Tequila', 'Whiskey'],
-                'answer': 'Rum'
+                'options': ['Arak', 'Rum', 'Tequila', 'Whiskey'],
+                'answer': 'Arak'
             },
             {
                 'text': 'How much ice is typically used in a Coco Loco?',
-                'options': ['None', 'Cubed', 'Crushed', 'As desired'],
-                'answer': 'As desired'
+                'options': ['None', 'Quarter', 'Half', 'As desired'],
+                'answer': 'Quarter'
             },
             {
                 'text': 'Which fruit is used in a Coco Loco?',
@@ -192,7 +192,18 @@ def quiz_page(quiz_id):
 
 @app.route('/quiz/result')
 def submit_total_score():
-    return render_template('result.html')
+    total_score = session.get('total_score', 0)
+    return render_template('result.html', total_score=total_score)
+
+@app.route('/quiz/<int:quiz_id>/score', methods=['POST'])
+def update_score():
+    score = request.json.get('score', 0)
+    if 'total_score' not in session:
+        session['total_score'] = 0
+    session['total_score'] += score
+    return jsonify({"message": "Score updated successfully", "total_score": session['total_score']})
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

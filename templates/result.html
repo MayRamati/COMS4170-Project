@@ -2,12 +2,15 @@
 {% block content %}
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
     <meta charset="UTF-8">
     <title>Quiz Result</title>
 </head>
 <body>
     <h1>Your Final Score</h1>
-    <p>Your total score is: </p>
+    <p>Your total score is: {{ total_score }}</p>
+    <!-- Button to redirect to learning page -->
+    <a href="/learn_menu" class="btn btn-primary">Back to Learning</a>
 </body>
 </html>
 {% endblock %}

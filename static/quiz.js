@@ -44,8 +44,21 @@ function submitQuiz() {
             score += 1;
         }
     });
-     totalScore += score;
+    totalScore += score;
     document.getElementById('result').textContent = `Your score: ${score}/${quizData.questions.length}`;
+
+    fetch(`/quiz/${quizData.quiz_id}/score`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ score: score })
+    }).then(response => response.json())
+      .then(data => {
+          console.log('Score submission response:', data);
+      }).catch(error => {
+          console.error('Error submitting score:', error);
+      });
 }
 
 window.onload = loadQuiz;

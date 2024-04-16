@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2E6D8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#result-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center; /* Assuming the results might be centered */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333; /* Ensuring the text color is specified */
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D9BEA7;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from links styled as buttons */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #F2DABD;
+}
