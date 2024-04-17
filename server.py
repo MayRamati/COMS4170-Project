@@ -7,60 +7,63 @@ app.secret_key = 'COMS4170'
 
 lessons = {
     1: {
-        "name": "Coco Loco",
-        "ingredients": ["Arak", "Grapefruit", "Mint Leaves", "Ice"],
+        "name": "Ol Fashioned",
+        "ingredients": ["Scotch Whiskey", "Granulated Sugar", "Dashes Bitters", "Orange Slice", "Water", "Ice"],
         "preparation_steps": [
-            "Fill a quarter of a glass with ice.",
-            "Pour in Arak till it fills ⅓ of the glass.",
-            "Fill the rest with grapefruit.",
-            "Throw a bunch of mint leaves in.",
-            "Stir.",
+            "Put the sugar, bitters and water in a small tumbler.",
+            "Mix until the suger dissolves if using granulated.",
+            "Fill your glass with ice and stir in the Whiskey.",
+            "Garnish with the orange.",
             "Drink!"
         ],
         "image": "learn1.jpeg"
     },
     2: {
-        "name": "Lose Control",
-        "ingredients": ["Vodka", "Redbull", "Ice"],
+        "name": "Sex on the Beach",
+        "ingredients": ["Vodka", "peach schnapps", "Orange Juice","Cranberry Juice", "Orange slice", "glace cherry","Ice"],
         "preparation_steps": [
             "Fill the glass with ice.",
-            "Pour in two shots vodka.",
-            "Fill the rest with redbull.",
+            "Pour some vodka, peach schnapps and fruit juices and stir.",
+            "Decorate with the cherry and orange slice",
             "Salute!"
         ],
         "image": "learn2.jpeg"
     },
     3: {
-        "name": "House Blend",
-        "ingredients": ["Campari", "Orange Juice", "Orange", "Ice"],
+        "name": "Classic Negroni",
+        "ingredients": ["Campari", "Gin", "Orange Juice", "Orange", "Ice"],
         "preparation_steps": [
-            "Put 3-4 ice cubes in a glass.",
-            "Pour in 3 shots of campari.",
+            "Pour in 3 shots of campari, 3 shots of gin into a glass or jug with ice.",
+            "Stir well until the outside of the glass feels cold."
             "Fill with orange juice till ¾ of the glass is filled.",
+            "Add a large ice sphere or some fresh ice."
             "Cut a slice of orange and lay it down inside the glass.",
             "Call your friends!"
         ],
         "image": "learn3.jpeg"
     },
     4: {
-        "name": "Warm Drinks for Cold Days",
-        "ingredients": ["Red Wine", "Apple Juice", "Cinnamon Sticks", "Peaches"],
+        "name": "Sangaria",
+        "ingredients": ["Red Wine","Brandy", "Chopped Orange","Chopped Pear", "Chopped Lemon", "Cinnamon Sticks", "Sugar", "Ice","Sparkling Water"],
         "preparation_steps": [
-            "Pour in a bottle of Wine into a pot.",
-            "Pour 4 cups of apple juice.",
-            "Throw in a bunch of cinnamon sticks.",
-            "Throw in sliced tiny pieces of peaches.",
-            "Heat until boiling",
+            "Put the chopped fruits in a bowl.",
+            "Sprinkle in the sugar and cinnamon and stir to coat.",
+            "Stir the mixture with ice.",
+            "Pour in the whine and brandy.",
+            "Top with sparkling water.",
             "Enjoy! Relax on the couch"
         ],
         "image": "learn4.jpeg"
     },
     5: {
-        "name": "Relax on the couch",
-        "ingredients": ["Champagne/Sparkling Wine", "Orange Juice"],
+        "name": "Hot Toddy",
+        "ingredients": ["Whisky", "Honey","Cinnamon Stick","Lemon - half juiced/half sliced",],
         "preparation_steps": [
-            "Fill a half glass with champagne/sparkling wine.",
-            "Fill the rest with orange juice.",
+            "Whisk the whisky and honey together.",
+            "Add a cinnamon stick.",
+            "Pour in boiling water.",
+            "Add a splash of lemon juice."
+            "Throw in a sliced lemon",
             "Lay down and relax."
         ],
         "image": "learn5.jpeg"
