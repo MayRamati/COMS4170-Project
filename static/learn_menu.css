@@ -2,11 +2,17 @@
 .card {
     height: 100%;
 }
-
 .card-img-top {
     object-fit: cover;
     height: 400px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
 body {
 background-color: #D9BEA7;
     color: #F2EEEB;
