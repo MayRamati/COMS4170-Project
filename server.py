@@ -16,7 +16,7 @@ lessons = {
             "Garnish with the orange.",
             "Drink!"
         ],
-        "image": "learn1.jpeg"
+        "image": "learn8.jpeg"
     },
     2: {
         "name": "Sex on the Beach",
@@ -27,7 +27,7 @@ lessons = {
             "Decorate with the cherry and orange slice",
             "Salute!"
         ],
-        "image": "learn2.jpeg"
+        "image": "learn7.jpeg"
     },
     3: {
         "name": "Classic Negroni",
@@ -66,7 +66,7 @@ lessons = {
             "Throw in a sliced lemon",
             "Lay down and relax."
         ],
-        "image": "learn5.jpeg"
+        "image": "learn6.jpeg"
     }
 }
 
