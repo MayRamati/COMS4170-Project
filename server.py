@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, session
 import datetime
-from flask import session
 
 app = Flask(__name__)
 app.secret_key = 'COMS4170'
@@ -150,7 +149,6 @@ quizzes = {
     }
 }
 
-
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -193,10 +191,11 @@ def quiz_page(quiz_id):
 @app.route('/quiz/result')
 def submit_total_score():
     total_score = session.get('total_score', 0)
+    session['total_score'] = 0
     return render_template('result.html', total_score=total_score)
 
 @app.route('/quiz/<int:quiz_id>/score', methods=['POST'])
-def update_score():
+def update_score(quiz_id):
     score = request.json.get('score', 0)
     if 'total_score' not in session:
         session['total_score'] = 0

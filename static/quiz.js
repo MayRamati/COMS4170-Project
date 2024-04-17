@@ -1,5 +1,5 @@
 let answers = {};
-let totalScore = 0;
+let total_score = 0;
 
 function loadQuiz() {
     displayQuiz(quizData);
@@ -25,7 +25,6 @@ function displayQuiz(quiz) {
                 let buttons = questionElem.getElementsByClassName('option');
                 for (let btn of buttons) {
                     btn.classList.remove('selected');
-                    btn.disabled = true;
                 }
                 this.classList.add('selected');
                 this.disabled = false;
@@ -44,21 +43,19 @@ function submitQuiz() {
             score += 1;
         }
     });
-    totalScore += score;
-    document.getElementById('result').textContent = `Your score: ${score}/${quizData.questions.length}`;
-
-    fetch(`/quiz/${quizData.quiz_id}/score`, {
+    fetch(`/quiz/${quiz_id}/score`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ score: score })
+        body: JSON.stringify({score: score})
     }).then(response => response.json())
-      .then(data => {
-          console.log('Score submission response:', data);
-      }).catch(error => {
-          console.error('Error submitting score:', error);
-      });
-}
+        .then(data => {
+            console.log('Score submission response:', data);
+        }).catch(error => {
+        console.error('Error submitting score:', error);
+    });
 
+    document.getElementById('result').textContent = `Your score: ${score}/${quizData.questions.length}`;
+}
 window.onload = loadQuiz;
