@@ -1,5 +1,6 @@
 {% extends 'layout.html' %}
 {% block content %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,36 +8,41 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='learn.css') }}">
 </head>
 <body>
-<br><br>
 <div class="container">
-<h1>{{ data.name }}</h1>
-<img src="{{ url_for('static', filename='img/' + data.image) }}" alt="{{ data.name }} Image" class="lesson-image">
-<h2>Ingredients:</h2>
-<br>
-<ul>
-    {% for ingredient in data.ingredients %}
-    <li>{{ ingredient }}</li>
-    {% endfor %}
-</ul>
-
-<h2>Preparation:</h2>
-<br>
-<ol>
-    {% for step in data.preparation_steps %}
-    <li>{{ step }}</li>
-    {% endfor %}
-</ol>
-
-<br><br>
-{% if next_lesson == None %}
-    <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
-    <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
-{% else %}
-    <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
-    <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
-    <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a>
-    <br><br>
-{% endif %}
+    <h1 class="cocktail-name">{{ data.name }}</h1> <!-- The cocktail name as the page header -->
+    <div class="cocktail-display">
+        <!-- Image on the left -->
+        <div class="lesson-image">
+            <img src="{{ url_for('static', filename='img/' + data.image) }}" alt="{{ data.name }} Image">
+        </div>
+        <br> <br>
+        <!-- Details on the right -->
+        <div class="cocktail-details"> <br>
+       <h2>
+        <img src="https://www.shutterstock.com/image-vector/vector-sketch-martini-glass-olives-260nw-227829139.jpg" alt="Ingredients Icon" class="title-icon" > Ingredients:
+       </h2>
+            <ul>
+                {% for ingredient in data.ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul> <br>
+            <h2>
+             <img src="https://www.shutterstock.com/image-vector/shaker-icon-vector-illustration-600nw-500695585.jpg" alt="Preparation Icon" class="title-icon"> Preparation:
+            </h2>
+            <ol>
+                {% for step in data.preparation_steps %}
+                <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+    <div class="button-group">
+        <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
+        {% if next_lesson %}
+            <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a>
+        {% endif %}
+        <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
+    </div>
 </div>
 </body>
 </html>
