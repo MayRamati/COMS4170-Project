@@ -7,7 +7,7 @@ app.secret_key = 'COMS4170'
 
 lessons = {
     1: {
-        "name": "Ol Fashioned",
+        "name": "Old Fashioned",
         "ingredients": ["Scotch Whiskey", "Granulated Sugar", "Dashes Bitters", "Orange Slice", "Water", "Ice"],
         "preparation_steps": [
             "Put the sugar, bitters and water in a small tumbler.",
@@ -69,9 +69,6 @@ lessons = {
         "image": "learn6.jpeg"
     }
 }
-
-
-
 
 quizzes = {
     1: {

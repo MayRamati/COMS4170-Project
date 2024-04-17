@@ -9,14 +9,13 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="cocktail-name">{{ data.name }}</h1> <!-- The cocktail name as the page header -->
+    <h1 class="cocktail-name">{{ data.name }}</h1>
     <div class="cocktail-display">
         <!-- Image on the left -->
         <div class="lesson-image">
             <img src="{{ url_for('static', filename='img/' + data.image) }}" alt="{{ data.name }} Image">
         </div>
         <br> <br>
-        <!-- Details on the right -->
         <div class="cocktail-details"> <br>
        <h2>
         <img src="https://www.shutterstock.com/image-vector/vector-sketch-martini-glass-olives-260nw-227829139.jpg" alt="Ingredients Icon" class="title-icon" > Ingredients:

@@ -55,6 +55,7 @@ ul, ol {
     color: #fff;
     background-color: #D9BEA7;
     text-decoration: none;
+    border:none
 }
 
 .btn:hover {

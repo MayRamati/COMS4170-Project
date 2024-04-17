@@ -2,28 +2,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const learning = [
         {
             id: 1,
-            name: 'Coco Loco',
-            image_url: 'static/img/learn1.jpeg'
+            name: 'Old Fashioned',
+            image_url: 'static/img/learn8.jpeg'
         },
         {
             id: 2,
-            name: 'Lose Control',
-            image_url: 'static/img/learn2.jpeg'
+            name: 'Sex on the Beach',
+            image_url: 'static/img/learn7.jpeg'
         },
         {
             id: 3,
-            name: 'House Blend',
+            name: 'Classic Negroni',
             image_url: 'static/img/learn3.jpeg'
         },
         {
             id: 4,
-            name: 'Warm Drinks for Cold Days',
+            name: 'Sangaria',
             image_url: 'static/img/learn4.jpeg'
         },
         {
             id: 5,
-            name: 'Relax on the couch',
-            image_url: 'static/img/learn5.jpeg'
+            name: 'Hot Toddy',
+            image_url: 'static/img/learn6.jpeg'
         }
     ];
 
