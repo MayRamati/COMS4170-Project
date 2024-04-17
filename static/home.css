@@ -37,11 +37,14 @@ h1 {
     border-radius: 4px;
     padding: 15px 30px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 #startButton:hover {
     background-color: #D9BEA7;
+    color: #000;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 .description-container {
     margin-left:600px;
