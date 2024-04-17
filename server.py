@@ -4,6 +4,7 @@ import datetime
 app = Flask(__name__)
 app.secret_key = 'COMS4170'
 
+
 lessons = {
     1: {
         "name": "Coco Loco",
