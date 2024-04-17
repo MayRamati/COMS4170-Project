@@ -1,41 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-}
-
 .container {
     max-width: 900px;
+    margin: auto;
+    padding: 10px;
 }
 
-h1 {
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.cocktail-display {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of flex items to move the image to the right */
+    justify-content: flex-end; /* Align flex items to the right */
 }
 
-h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 20px;
+.lesson-image {
+    flex: 1; /* Make the image section flexible */
+    max-width: 50%; /* Limit image width to 30% of the container */
+}
+
+.lesson-image img {
+    width: 150%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.cocktail-info {
+    flex: 1; /* Flexible space */
+    text-align: center; /* Center text */
+    padding: 0 20px; /* Add some padding around the text */
+}
+
+.cocktail-details {
+    flex: 2; /* Allocate twice as much space as other sections */
+    text-align: left; /* Left-align the text */
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+h1, h2 {
+    margin-bottom: 10px; /* Reduce margin for headings */
 }
 
 ul, ol {
-    margin-bottom: 20px;
-    text-align: center;
-    list-style-type: none;
-}
-
-li {
-    font-size: 20px;
-    margin-bottom: 10px;
+    padding: 0;
+    list-style-position: inside; /* Position list markers inside to save space */
 }
 
 .button-group {
@@ -46,31 +50,19 @@ li {
 
 .btn {
     padding: 12px 24px;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    border: none;
+    font-size: 18px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-secondary {
+    color: #fff;
     background-color: #D9BEA7;
-}
-
-.btn-primary {
-    background-color: #D9BEA7;
+    text-decoration: none;
 }
 
 .btn:hover {
     background-color: #F2DABD;
 }
-.lesson-image {
-    max-width: 20%;
-    max-height: 20%;
-    display: block;
-    margin: auto;
-}
 
+.title-icon {
+    height: 40px; /* Example size, adjust as needed */
+    margin-right: 10px; /* Adds some space between the icon and the text */
+    vertical-align: middle; /* Aligns the icon with the middle of the text */
+}
