@@ -35,13 +35,18 @@
             </ol>
         </div>
     </div>
-    <div class="button-group">
+<div class="button-group">
+    {% if quiz == 1 %}
+        <a href="/learn_menu" class="btn btn-primary">Go Back</a>
+    {% else %}
         <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
-        {% if next_lesson %}
+    {% endif %}
+    {% if next_lesson %}
             <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a>
-        {% endif %}
+    {% endif %}
         <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
-    </div>
+</div>
+
 </div>
 </body>
 </html>
