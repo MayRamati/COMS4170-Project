@@ -36,7 +36,7 @@ lessons = {
             "Pour in 3 shots of campari, 3 shots of gin into a glass or jug with ice.",
             "Stir well until the outside of the glass feels cold."
             "Fill with orange juice till ¾ of the glass is filled.",
-            "Add a large ice sphere or some fresh ice."
+            "Add a large ice sphere."
             "Cut a slice of orange and lay it down inside the glass.",
             "Call your friends!"
         ],
@@ -74,80 +74,80 @@ quizzes = {
     1: {
         'questions': [
             {
-                'text': 'What is the main ingredient in a Coco Loco?',
-                'options': ['Arak', 'Rum', 'Tequila', 'Whiskey'],
-                'answer': 'Arak'
+                'text': 'What is the main ingredient in an Old Fashioned cocktail?',
+                'options': ['Arak', 'Rum', 'Tequila', 'Scotch Whiskey'],
+                'answer': 'Scotch Whiskey'
             },
             {
-                'text': 'How much ice is typically used in a Coco Loco?',
-                'options': ['None', 'Quarter', 'Half', 'As desired'],
-                'answer': 'Quarter'
+                'text': 'How much ice is typically used in an Old Fashioned cocktail?',
+                'options': ['None', 'Full', 'Half', 'As desired'],
+                'answer': 'Full'
             },
             {
-                'text': 'Which fruit is used in a Coco Loco?',
+                'text': 'Which fruit is used to garnished an Old Fashioned cocktail?',
                 'options': ['Lemon', 'Orange', 'Grapefruit', 'Lime'],
-                'answer': 'Grapefruit'
+                'answer': 'Orange'
             }
         ]
     },
     2: {
         'questions': [
             {
-                'text': 'What type of alcohol is mixed with Redbull in Lose Control?',
+                'text': 'What type of alcohol is used in Sex on the Beach?',
                 'options': ['Vodka', 'Gin', 'Whiskey', 'Rum'],
                 'answer': 'Vodka'
             },
             {
-                'text': 'What is the final gesture suggested in the preparation of Lose Control?',
-                'options': ['Cheers', 'Salute', 'Toast', 'Clap'],
-                'answer': 'Salute'
+                'text': 'What is the suggested decoration in the preparation of Sex on the Beach?',
+                'options': ['Watermelon', 'Sliced grapes', 'Cherry and orange slice', 'Cucumber stripes'],
+                'answer': 'Cherry and orange slice'
             }
         ]
     },
     3: {
         'questions': [
             {
-                'text': 'What is the primary alcoholic ingredient in House Blend?',
-                'options': ['Vodka', 'Gin', 'Campari', 'Rum'],
-                'answer': 'Campari'
+                'text': 'What is the primary alcoholic ingredient in a Classic Negroni?',
+                'options': ['Vodka', 'Gin and tonic', 'Gin and Campari', 'Rum and Coke'],
+                'answer': 'Gin and Campari'
             },
             {
-                'text': 'What type of juice complements Campari in House Blend?',
+                'text': 'What type of juice complements Campari in a Classic Negroni?',
                 'options': ['Lemon Juice', 'Apple Juice', 'Orange Juice', 'Grapefruit Juice'],
                 'answer': 'Orange Juice'
             },
             {
-                'text': 'How many ice cubes are typically used in the House Blend?',
-                'options': ['1-2', '3-4', '5-6', '7-8'],
-                'answer': '3-4'
+                'text': 'How many ice cubes are typically used in a Classic Negroni?',
+                'options': ['A large ice sphere', 'half full class', 'full', 'None'],
+                'answer': 'large ice sphere'
             }
         ]
     },
     4: {
         'questions': [
             {
-                'text': 'Which fruit is added to the wine and apple juice in Warm Drinks for Cold Days?',
-                'options': ['Peaches', 'Oranges', 'Lemons', 'Apples'],
-                'answer': 'Peaches'
+                'text': 'What is the main alcoholic ingredient used in Sangaria??',
+                'options': ['Vodka', 'Rose Wine', 'Red Wine', 'White Wine'],
+                'answer': 'Red Wine'
             },
             {
-                'text': 'What is the main liquid base in Warm Drinks for Cold Days?',
-                'options': ['Beer', 'Vodka', 'Red Wine', 'Whiskey'],
-                'answer': 'Red Wine'
+                'text': 'Which of the following steps is involved in preparing Sangaria??',
+                'options': ['Freeze the mixture until solid', 'Blend all ingredients until smooth', 'Pour in the wine and brandy', 'Bake the ingredients for 10 minutes'],
+                'answer': 'Pour in the wine and brandy'
             }
         ]
     },
     5: {
         'questions': [
             {
-                'text': 'What kind of wine is used in Relax on the couch?',
-                'options': ['Red Wine', 'White Wine', 'Champagne/Sparkling Wine', 'Rose Wine'],
-                'answer': 'Champagne/Sparkling Wine'
+                'text': 'Which ingredient gives the Hot Toddy its sweet flavor?',
+                'options': ['Sugar', 'Honey', 'Maple Syrup', 'Agave Nectar'],
+                'answer': 'Honey'
             },
             {
-                'text': 'What is mixed with the champagne in Relax on the couch?',
-                'options': ['Lemon Juice', 'Apple Juice', 'Grapefruit Juice', 'Orange Juice'],
-                'answer': 'Orange Juice'
+                'text': 'What is the final step in the preparation of a Hot Toddy?',
+                'options': ['Chill in the refrigerator', 'Lay down and relax', 'Serve over ice', 'Garnish with mint'],
+                'answer': 'Lay down and relax'
             }
         ]
     }
