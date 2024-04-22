@@ -6,40 +6,43 @@
 
 .cocktail-display {
     display: flex;
-    flex-direction: row-reverse; /* Reverse the order of flex items to move the image to the right */
-    justify-content: flex-end; /* Align flex items to the right */
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.cocktail-name {
+    color: #808080;
 }
 
 .lesson-image {
-    flex: 1; /* Make the image section flexible */
-    max-width: 50%; /* Limit image width to 30% of the container */
+    flex: 1;
+    max-width: 50%;
 }
 
 .lesson-image img {
-    width: 150%; /* Full width of its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 150%;
+    height: auto;
 }
 
 .cocktail-info {
-    flex: 1; /* Flexible space */
-    text-align: center; /* Center text */
-    padding: 0 20px; /* Add some padding around the text */
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .cocktail-details {
-    flex: 2; /* Allocate twice as much space as other sections */
-    text-align: left; /* Left-align the text */
+    flex: 2;
+    text-align: left;
     padding-left: 5px;
     padding-right: 10px;
 }
 
 h1, h2 {
-    margin-bottom: 10px; /* Reduce margin for headings */
+    margin-bottom: 10px;
 }
 
 ul, ol {
     padding: 0;
-    list-style-position: inside; /* Position list markers inside to save space */
+    list-style-position: inside;
 }
 
 .button-group {
@@ -63,7 +66,7 @@ ul, ol {
 }
 
 .title-icon {
-    height: 40px; /* Example size, adjust as needed */
-    margin-right: 10px; /* Adds some space between the icon and the text */
-    vertical-align: middle; /* Aligns the icon with the middle of the text */
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
 }

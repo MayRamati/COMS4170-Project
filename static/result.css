@@ -54,7 +54,7 @@ h1 {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
-    display: inline-block; /* Correct alignment */
+    display: inline-block;
 }
 
 .btn-primary:hover {
