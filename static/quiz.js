@@ -23,11 +23,18 @@ function displayQuiz(quiz) {
             optionButton.onclick = function() {
                 answers[index] = option;
                 let buttons = questionElem.getElementsByClassName('option');
-                for (let btn of buttons) {
-                    btn.classList.remove('selected');
+                Array.from(buttons).forEach(btn => {
+                    btn.disabled = true;
+                    btn.classList.remove('incorrect');
+                    btn.classList.remove('correct');
+                    if (btn.textContent === question.answer) {
+                        btn.classList.add('correct');
+                    }
+                });
+                if (option !== question.answer) {
+                    this.classList.add('incorrect');
                 }
                 this.classList.add('selected');
-                this.disabled = false;
             };
             questionElem.appendChild(optionButton);
         });

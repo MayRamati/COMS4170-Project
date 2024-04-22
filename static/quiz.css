@@ -48,7 +48,19 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.option:hover {
+    background-color: #F2DABD;
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.option:active {
+    transform: scale(0.95);
+}
 }
 .option.selected {
     background-color: #F2EEEB;
@@ -59,4 +71,12 @@ h1 {
 }
 .btn:hover {
     background-color: #F2DABD;
+}
+.correct {
+    background-color: #50C878 !important;
+    color: white !important;
+}
+.incorrect {
+    background-color: red !important;
+    color: white !important;
 }
