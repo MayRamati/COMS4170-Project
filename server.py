@@ -17,6 +17,7 @@ lessons = {
             "Drink!"
         ],
         "image": "learn8.jpeg"
+        "video": 'Old Fashioned.mp4'
     },
     2: {
         "name": "Sex on the Beach",
@@ -28,6 +29,7 @@ lessons = {
             "Salute!"
         ],
         "image": "learn7.jpeg"
+        "video": 'sex on the beach.mp4'
     },
     3: {
         "name": "Classic Negroni",
@@ -41,6 +43,7 @@ lessons = {
             "Call your friends!"
         ],
         "image": "learn3.jpeg"
+        "video": 'Classic Negroni.mp4'
     },
     4: {
         "name": "Sangaria",
@@ -54,6 +57,7 @@ lessons = {
             "Enjoy! Relax on the couch"
         ],
         "image": "learn4.jpeg"
+        "video": 'Sangeria.mp4'
     },
     5: {
         "name": "Hot Toddy",
@@ -67,6 +71,7 @@ lessons = {
             "Lay down and relax."
         ],
         "image": "learn6.jpeg"
+        "video": 'hot toddy.mp4'
     }
 }
 
