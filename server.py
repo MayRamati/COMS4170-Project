@@ -36,7 +36,7 @@ lessons = {
             "Pour in 3 shots of campari, 3 shots of gin into a glass or jug with ice.",
             "Stir well until the outside of the glass feels cold."
             "Fill with orange juice till ¾ of the glass is filled.",
-            "Add a large ice sphere."
+            "Add a large ice sphere.",
             "Cut a slice of orange and lay it down inside the glass.",
             "Call your friends!"
         ],
