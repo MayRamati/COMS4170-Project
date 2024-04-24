@@ -17,7 +17,7 @@ h1 {
     font-weight: bold;
     color: #FFFFFF;
     margin-bottom: 40px;
-
+    font-family: sans-serif;
 }
 
 .description {
@@ -25,6 +25,7 @@ h1 {
     color: #FFFFFF;
     margin-bottom: 40px;
     padding-left: 100px;
+    font-family: sans-serif;
 
 }
 

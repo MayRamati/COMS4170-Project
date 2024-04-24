@@ -16,7 +16,7 @@ lessons = {
             "Garnish with the orange.",
             "Drink!"
         ],
-        "image": "learn8.jpeg"
+        "image": "learn8.jpeg",
         "video": 'Old Fashioned.mp4'
     },
     2: {
@@ -28,7 +28,7 @@ lessons = {
             "Decorate with the cherry and orange slice",
             "Salute!"
         ],
-        "image": "learn7.jpeg"
+        "image": "learn7.jpeg",
         "video": 'sex on the beach.mp4'
     },
     3: {
@@ -42,7 +42,7 @@ lessons = {
             "Cut a slice of orange and lay it down inside the glass.",
             "Call your friends!"
         ],
-        "image": "learn3.jpeg"
+        "image": "learn3.jpeg",
         "video": 'Classic Negroni.mp4'
     },
     4: {
@@ -56,7 +56,7 @@ lessons = {
             "Top with sparkling water.",
             "Enjoy! Relax on the couch"
         ],
-        "image": "learn4.jpeg"
+        "image": "learn4.jpeg",
         "video": 'Sangeria.mp4'
     },
     5: {
@@ -70,7 +70,7 @@ lessons = {
             "Throw in a sliced lemon",
             "Lay down and relax."
         ],
-        "image": "learn6.jpeg"
+        "image": "learn6.jpeg",
         "video": 'hot toddy.mp4'
     }
 }
