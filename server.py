@@ -8,10 +8,11 @@ app.secret_key = 'COMS4170'
 lessons = {
     1: {
         "name": "Old Fashioned",
+        "info": "A classic American cocktail made with whiskey, sugar, bitters, and garnished with an orange peel.",
         "ingredients": ["Scotch Whiskey", "Granulated Sugar", "Dashes Bitters", "Orange Slice", "Water", "Ice"],
         "preparation_steps": [
             "Put the sugar, bitters and water in a small tumbler.",
-            "Mix until the suger dissolves if using granulated.",
+            "Mix until the sugar dissolves if using granulated.",
             "Fill your glass with ice and stir in the Whiskey.",
             "Garnish with the orange.",
             "Drink!"
@@ -21,7 +22,8 @@ lessons = {
     },
     2: {
         "name": "Sex on the Beach",
-        "ingredients": ["Vodka", "peach schnapps", "Orange Juice","Cranberry Juice", "Orange slice", "glace cherry","Ice"],
+        "info": "A fruity cocktail made with vodka, peach schnapps, orange juice, and cranberry juice.",
+        "ingredients": ["Vodka", "peach schnapps", "Orange Juice", "Cranberry Juice", "Orange slice", "glace cherry", "Ice"],
         "preparation_steps": [
             "Fill the glass with ice.",
             "Pour some vodka, peach schnapps and fruit juices and stir.",
@@ -33,10 +35,11 @@ lessons = {
     },
     3: {
         "name": "Classic Negroni",
+        "info": "An iconic Italian cocktail made with gin, vermouth rosso, and Campari, garnished with an orange peel.",
         "ingredients": ["Campari", "Gin", "Orange Juice", "Orange", "Ice"],
         "preparation_steps": [
             "Pour in 3 shots of campari, 3 shots of gin into a glass or jug with ice.",
-            "Stir well until the outside of the glass feels cold."
+            "Stir well until the outside of the glass feels cold.",
             "Fill with orange juice till ¾ of the glass is filled.",
             "Add a large ice sphere.",
             "Cut a slice of orange and lay it down inside the glass.",
@@ -47,12 +50,13 @@ lessons = {
     },
     4: {
         "name": "Sangaria",
-        "ingredients": ["Red Wine","Brandy", "Chopped Orange","Chopped Pear", "Chopped Lemon", "Cinnamon Sticks", "Sugar", "Ice","Sparkling Water"],
+        "info": "A Spanish punch made with red wine, chopped fruits, and often mixed with brandy or sparkling water.",
+        "ingredients": ["Red Wine", "Brandy", "Chopped Orange", "Chopped Pear", "Chopped Lemon", "Cinnamon Sticks", "Sugar", "Ice", "Sparkling Water"],
         "preparation_steps": [
             "Put the chopped fruits in a bowl.",
             "Sprinkle in the sugar and cinnamon and stir to coat.",
             "Stir the mixture with ice.",
-            "Pour in the whine and brandy.",
+            "Pour in the wine and brandy.",
             "Top with sparkling water.",
             "Enjoy! Relax on the couch"
         ],
@@ -61,12 +65,13 @@ lessons = {
     },
     5: {
         "name": "Hot Toddy",
-        "ingredients": ["Whisky", "Honey","Cinnamon Stick","Lemon - half juiced/half sliced",],
+        "info": "A warm beverage made with whiskey, honey, lemon, and often enjoyed as a remedy for colds.",
+        "ingredients": ["Whisky", "Honey", "Cinnamon Stick", "Lemon - half juiced/half sliced"],
         "preparation_steps": [
             "Whisk the whisky and honey together.",
             "Add a cinnamon stick.",
             "Pour in boiling water.",
-            "Add a splash of lemon juice."
+            "Add a splash of lemon juice.",
             "Throw in a sliced lemon",
             "Lay down and relax."
         ],
@@ -74,6 +79,7 @@ lessons = {
         "video": 'hot toddy.mp4'
     }
 }
+
 
 quizzes = {
     1: {

@@ -32,8 +32,8 @@ h1 {
 }
 
 .draggable, .droppable {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     padding: 10px;
     margin: 10px;
     border: 1px solid #ccc;
@@ -59,12 +59,12 @@ h1 {
 }
 
 button#submit-quiz {
-    padding: 10px 20px;
+    padding: 20px 40px;
     font-size: 16px;
 }
 .btn-primary {
-    padding: 12px 24px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 40px;
     border-radius: 5px;
     color: #fff;
     background-color: #D9BEA7;

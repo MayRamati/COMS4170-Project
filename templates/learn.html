@@ -9,7 +9,8 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="cocktail-name">{{ data.name }}</h1>
+    <h1 class="cocktail-name">{{ data.name }}</h1> <br>
+    <p class="cocktail-info">{{ data.info }}</p> <br>
     <div class="cocktail-display">
         <!-- Image on the left -->
         <div class="lesson-image">
@@ -17,7 +18,7 @@
         </div>
         <br> <br>
         <div class="cocktail-details"> <br>
-       <h2 class="cocktail-name">
+       <h2 class="cocktail-headlines">
         <img src="https://www.shutterstock.com/image-vector/vector-sketch-martini-glass-olives-260nw-227829139.jpg" alt="Ingredients Icon" class="title-icon" > Ingredients:
        </h2>
             <ul>
@@ -25,7 +26,7 @@
                 <li>{{ ingredient }}</li>
                 {% endfor %}
             </ul> <br>
-            <h2 class = "cocktail-name">
+            <h2 class = "cocktail-headlines">
              <img src="https://www.shutterstock.com/image-vector/shaker-icon-vector-illustration-600nw-500695585.jpg" alt="Preparation Icon" class="title-icon"> Preparation:
             </h2>
             <ol>
@@ -34,11 +35,13 @@
                 {% endfor %}
             </ol>
         </div>
-    </div>
-    <video width="320" height="240" controls>
-        <source src="{{ url_for('static', filename="videos/" + data.video) }}"
-        type="video/mp4" />
+    </div> <br> <br>
+<div class="video-container">
+    <video controls>
+        <source src="{{ url_for('static', filename='videos/' + data.video) }}" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
+</div> <br>
 <div class="button-group">
     {% if quiz == 1 %}
         <a href="/learn_menu" class="btn btn-primary">Go Back</a>

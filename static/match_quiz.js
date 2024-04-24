@@ -1,53 +1,46 @@
 $(function() {
-    // Initialize draggable elements
     $(".draggable").draggable({
         helper: "clone",
-        revert: "invalid",
-        start: function(event, ui) {
-            $(ui.helper).css("opacity", "0.5");  // Reduce opacity of the drag helper
-        }
+        revert: "invalid", // Revert if dropped incorrectly
+        opacity: 0.7       // Make the drag helper slightly transparent
     });
 
-    // Initialize droppable elements
     $(".droppable").droppable({
         accept: ".draggable",
-        tolerance: "touch",  // Adjusted to 'touch' for better drop detection
+        tolerance: "intersect", // Requires the draggable to intersect the droppable
         drop: function(event, ui) {
-            let draggableName = ui.draggable.data('name').trim();
-            let droppableName = $(this).data('name').trim();
-
+            var draggableName = ui.draggable.data('name').trim();
+            var droppableName = $(this).data('name').trim();
             if (draggableName === droppableName) {
                 // Correct match
-                $(this).find('img').css('border', '3px solid green');
-                ui.draggable.draggable('disable');
-                $(this).droppable('disable');
-                // Ensure the draggable snaps to center without being moved again
-                ui.draggable.position({
+                ui.draggable.css('border', '3px solid #50C878'); // Set the draggable's border color on correct drop
+                ui.draggable.draggable('disable'); // Disable further dragging
+                $(this).droppable('disable'); // Disable the droppable area
+                ui.draggable.position({ // Position the draggable centered to the droppable
                     my: "center",
                     at: "center",
                     of: $(this),
                     using: function(pos) {
-                        $(this).animate(pos, 200, "linear");
+                        $(this).animate(pos, 200, "linear"); // Smooth animation to center
                     }
                 });
             } else {
+                // If not a match, revert
                 ui.draggable.draggable('option', 'revert', true);
             }
         }
     });
 
-    // Function to handle the quiz submission
     $("#submit-quiz").on('click', function() {
         var correctMatches = 0;
-        $(".droppable").each(function() {
-            if ($(this).find('img').css('border-color') === 'rgb(0, 128, 0)') { // Checking if border is green
+        $(".draggable").each(function() {
+            if ($(this).css('border-color') === 'rgb(80, 200, 120)') { // Check if the border color is green (#50C878)
                 correctMatches += 1;
             }
         });
 
-        // Adjusted to potentially correct endpoint and handle errors
         $.ajax({
-            url: '/quiz/1/score', // Simplified for demonstration; adjust as necessary
+            url: '/quiz/1/score', // This needs to be dynamically set or correctly routed
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({score: correctMatches}),
