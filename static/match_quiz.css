@@ -1,0 +1,59 @@
+/* match_quiz.css */
+body {
+    background-color: #D9BEA7;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Centers the children in the flex container */
+    align-items: start; /* Aligns items at the top */
+    padding: 20px;
+}
+
+.names-area, .images-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; /* Adjusts spacing between the text and image areas */
+}
+
+.submit-area {
+    display: flex;
+    align-items: flex-start; /* Aligns the submit button to the top of the container */
+    justify-content: flex-end; /* Aligns the submit button to the right */
+    flex-grow: 1; /* Allows the area to take up any remaining space */
+    padding-top: 20px; /* Adds some padding on top for vertical alignment */
+}
+
+.draggable, .droppable {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+.draggable {
+    background-color: #f9f9f9;
+    cursor: pointer;
+    text-align: center;
+    line-height: 130px; /* Center text vertically */
+}
+
+.droppable {
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.droppable img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button#submit-quiz {
+    padding: 10px 20px;
+    font-size: 16px;
+}

@@ -206,7 +206,23 @@ def update_score(quiz_id):
     session['total_score'] += score
     return jsonify({"message": "Score updated successfully", "total_score": session['total_score']})
 
+@app.route('/match_quiz', methods=['GET'])
+def match_quiz():
+    # You can customize this data structure based on how you want to display images and names
+    cocktails = [
+        {"name": "Old Fashioned", "image": "learn8.jpeg"},
+        {"name": "Sex on the Beach", "image": "learn7.jpeg"},
+        {"name": "Classic Negroni", "image": "learn3.jpeg"},
+        {"name": "Sangaria", "image": "learn4.jpeg"},
+        {"name": "Hot Toddy", "image": "learn6.jpeg"}
+    ]
+    return render_template('match_quiz.html', cocktails=cocktails)
 
+@app.route('/result')
+def show_result():
+    total_score = session.get('total_score', 0)
+    session['total_score'] = 0  # Reset score if needed or handle differently depending on requirements
+    return render_template('result.html', total_score=total_score)
 
 if __name__ == "__main__":
     app.run(debug=True)
