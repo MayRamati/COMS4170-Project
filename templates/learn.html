@@ -35,6 +35,10 @@
             </ol>
         </div>
     </div>
+    <video width="320" height="240" controls>
+        <source src="{{ url_for('static', filename="videos/" + data.video) }}"
+        type="video/mp4" /> Your browser does not support the video tag.
+    </video>
 <div class="button-group">
     {% if quiz == 1 %}
         <a href="/learn_menu" class="btn btn-primary">Go Back</a>
