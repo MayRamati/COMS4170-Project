@@ -61,7 +61,7 @@ h1 {
 .option:active {
     transform: scale(0.95);
 }
-}
+
 .option.selected {
     background-color: #F2EEEB;
 }

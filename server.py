@@ -126,12 +126,12 @@ quizzes = {
     4: {
         'questions': [
             {
-                'text': 'What is the main alcoholic ingredient used in Sangaria??',
+                'text': 'What is the main alcoholic ingredient used in Sangaria?',
                 'options': ['Vodka', 'Rose Wine', 'Red Wine', 'White Wine'],
                 'answer': 'Red Wine'
             },
             {
-                'text': 'Which of the following steps is involved in preparing Sangaria??',
+                'text': 'Which of the following steps is involved in preparing Sangaria?',
                 'options': ['Freeze the mixture until solid', 'Blend all ingredients until smooth', 'Pour in the wine and brandy', 'Bake the ingredients for 10 minutes'],
                 'answer': 'Pour in the wine and brandy'
             }
