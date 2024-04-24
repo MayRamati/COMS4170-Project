@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop Quiz</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='match_quiz.css') }}">
+</head>
+<body>
+    <h1>Match Cocktails to their Pictures</h1>
+    <div id="quiz-wrapper">
+        <div id="quiz-container" class="flex-container">
+            <div class="names-area">
+                <div id="drag3" class="draggable" data-name="Classic Negroni">Classic Negroni</div>
+                <div id="drag5" class="draggable" data-name="Hot Toddy">Hot Toddy</div>
+                <div id="drag2" class="draggable" data-name="Sex on the Beach">Sex on the Beach</div>
+                <div id="drag4" class="draggable" data-name="Sangria">Sangria</div>
+                <div id="drag1" class="draggable" data-name="Old Fashioned">Old Fashioned</div>
+
+            </div>
+            <div class="images-area">
+                <div class="droppable" data-name="Old Fashioned"><img src="static/img/learn8.jpeg" alt="Old Fashioned"></div>
+                <div class="droppable" data-name="Sex on the Beach"><img src="static/img/learn7.jpeg" alt="Sex on the Beach"></div>
+                <div class="droppable" data-name="Classic Negroni"><img src="static/img/learn3.jpeg" alt="Classic Negroni"></div>
+                <div class="droppable" data-name="Sangria"><img src="static/img/learn4.jpeg" alt="Sangria"></div>
+                <div class="droppable" data-name="Hot Toddy"><img src="static/img/learn6.jpeg" alt="Hot Toddy"></div>
+            </div>
+        </div>
+        <div class="submit-area">
+            <button id="submit-quiz">Submit Quiz</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='match_quiz.js') }}"></script>
+</body>
+</html>
