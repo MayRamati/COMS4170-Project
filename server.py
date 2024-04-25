@@ -201,7 +201,8 @@ def quiz_page(quiz_id):
     if request.method == 'GET':
         quiz = quizzes.get(quiz_id, {})
         next_quiz = quiz_id + 1 if quiz_id < len(quizzes) else None
-        return render_template('quiz.html', quiz=quiz, quiz_id=quiz_id, next_quiz=next_quiz)
+        lesson_name = lessons[quiz_id]["name"] if quiz_id in lessons else "Quiz"
+        return render_template('quiz.html', quiz=quiz, quiz_id=quiz_id, next_quiz=next_quiz, lesson_name=lesson_name)
 
 @app.route('/quiz/result')
 def submit_total_score():

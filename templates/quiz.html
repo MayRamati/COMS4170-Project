@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
 </head>
 <body>
-    <h1>Quiz for Lesson {{ quiz_id }}</h1><br>
+    <h1> Quiz for {{ lesson_name }} Cocktail </h1><br>
     <div id="quiz-container" data-quiz-id="{{ quiz_id }}" ></div>
     <br>
     <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>

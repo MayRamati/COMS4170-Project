@@ -42,16 +42,17 @@
         Your browser does not support the video tag.
     </video>
 </div> <br>
+
 <div class="button-group">
     {% if quiz == 1 %}
         <a href="/learn_menu" class="btn btn-primary">Go Back</a>
     {% else %}
         <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
     {% endif %}
+    <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a> <!-- Moved up -->
     {% if next_lesson %}
-            <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a>
+        <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a> <!-- Moved down -->
     {% endif %}
-        <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
 </div>
 
 </div>
