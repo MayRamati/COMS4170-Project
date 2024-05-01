@@ -44,7 +44,7 @@ lessons = {
         "info": "An iconic Italian cocktail made with gin, vermouth rosso, and Campari, garnished with an orange peel.",
         "ingredients": ["Campari", "Gin", "Vermouth Rosso", "Orange", "Ice"],
         "preparation_steps": [
-            "Pour Campari, gin, and vermouth into a glass over ice.",
+            "Pour 1 ounce Campari, 1 ounce gin, and 1 ounce vermouth into a glass over ice.",
             "Stir well until the outside of the glass feels cold.",
             "Garnish with a slice of orange.",
             "Serve immediately and enjoy."
@@ -63,6 +63,7 @@ lessons = {
             "Put the chopped fruits in a bowl.",
             "Sprinkle in the sugar and cinnamon and stir to coat.",
             "Stir the mixture with ice.",
+            "Leave to macerate for 1hr.",
             "Pour in the wine and brandy.",
             "Top with sparkling water.",
             "Enjoy! Relax on the couch."
