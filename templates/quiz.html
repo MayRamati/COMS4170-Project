@@ -7,16 +7,17 @@
 </head>
 <body>
     <h1> Quiz for {{ lesson_name }} Cocktail </h1><br>
-    <div id="quiz-container" data-quiz-id="{{ quiz_id }}" ></div>
+    <div id="quiz-container" data-quiz-id="{{ quiz_id }}"></div>
     <br>
     <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
-    {% if next_quiz %}
-    <a href="/quiz/{{ next_quiz }}" class="btn btn-primary">Next Quiz</a>
-    {% endif %}
-    {% if quiz_id == 5 %}
-    <a href="/match_quiz" class="btn btn-primary">Go to Final Quiz</a>
-    {% endif %}
-
+    <div class="quiz-navigation">
+        {% if next_quiz %}
+        <a href="/quiz/{{ next_quiz }}" class="btn btn-primary">Next Quiz</a>
+        {% endif %}
+        {% if quiz_id == 5 %}
+        <a href="/match_quiz" class="btn btn-primary">Go to Final Quiz</a>
+        {% endif %}
+    </div>
     <div id="result"></div>
     <script>
         const quizData = JSON.parse('{{ quiz | tojson | safe }}');

@@ -59,7 +59,6 @@ function submitQuiz() {
     }).then(response => response.json())
         .then(data => {
             console.log('Score submission response:', data);
-            // Update submission state to true when the quiz is successfully submitted
             isQuizSubmitted = true;
             document.getElementById('result').textContent = `Your score: ${score}/${quizData.questions.length}`;
         }).catch(error => {

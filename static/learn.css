@@ -73,7 +73,7 @@ ul, ol {
     text-align: center;
     font-size: 50px;
     color: #808080;
-    margin-bottom: 0; /* Reduces space between the title and info text */
+    margin-bottom: 0;
 }
 
 .cocktail-info {
@@ -115,8 +115,15 @@ ul, ol {
     font-size: 20px;
 }
 
-
 .ingredients-list li {
-    font-size: 20px; /* Set the font size as desired */
+    font-size: 20px;
 }
 
+.btn.continue-quiz {
+    background-color: #BBAAA1;
+    color: white;
+}
+
+.btn.continue-quiz:hover {
+    background-color: #F2DABD;
+}
