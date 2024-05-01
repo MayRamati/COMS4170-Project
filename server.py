@@ -13,7 +13,7 @@ lessons = {
         "preparation_steps": [
             "Put the sugar, bitters and water in a small tumbler.",
             "Mix until the sugar dissolves if using granulated.",
-            "Fill your glass with ice and stir in the Whiskey.",
+            "Insert one cubic ice and stir in the Whiskey.",
             "Garnish with the orange.",
             "Drink!"
         ],
@@ -104,8 +104,8 @@ quizzes = {
             },
             {
                 'text': 'How much ice is typically used in an Old Fashioned cocktail?',
-                'options': ['None', 'Full', 'Half', 'As desired'],
-                'answer': 'Full'
+                'options': ['None', 'One cubic', 'Half', 'As desired'],
+                'answer': 'One cubic'
             },
             {
                 'text': 'Which fruit is used to garnished an Old Fashioned cocktail?',
