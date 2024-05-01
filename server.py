@@ -137,9 +137,9 @@ quizzes = {
                 'answer': 'Gin and Campari'
             },
             {
-                'text': 'What type of juice complements Campari in a Classic Negroni?',
-                'options': ['Lemon Juice', 'Apple Juice', 'Orange Juice', 'Grapefruit Juice'],
-                'answer': 'Orange Juice'
+                'text': 'Which fruit is used to garnished a Negroni cocktail?',
+                'options': ['Lemon', 'Apple', 'Orange', 'Grapefruit'],
+                'answer': 'Orange'
             },
             {
                 'text': 'How many ice cubes are typically used in a Classic Negroni?',

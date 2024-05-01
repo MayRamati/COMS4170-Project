@@ -12,11 +12,9 @@
     <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
     {% if next_quiz %}
     <a href="/quiz/{{ next_quiz }}" class="btn btn-primary">Next Quiz</a>
-    {% else %}
-    <!--<a href="/quiz/result" class="btn btn-primary">Final score</a>-->
     {% endif %}
     {% if quiz_id == 5 %}
-    <a href="/match_quiz" class="btn btn-primary">Go to next Quiz</a>
+    <a href="/match_quiz" class="btn btn-primary">Go to Final Quiz</a>
     {% endif %}
 
     <div id="result"></div>
