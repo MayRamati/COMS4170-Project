@@ -10,51 +10,61 @@
 <body>
 <div class="container">
     <h1 class="cocktail-name">{{ data.name }}</h1> <br>
-    <p class="cocktail-info">{{ data.info }}</p> <br>
+    <p class="cocktail-info">{{ data.info }}</p>
     <div class="cocktail-display">
-        <!-- Image on the left -->
         <div class="lesson-image">
             <img src="{{ url_for('static', filename='img/' + data.image) }}" alt="{{ data.name }} Image">
         </div>
-        <br> <br>
-        <div class="cocktail-details"> <br>
-       <h2 class="cocktail-headlines">
-        <img src="https://www.shutterstock.com/image-vector/vector-sketch-martini-glass-olives-260nw-227829139.jpg" alt="Ingredients Icon" class="title-icon" > Ingredients:
-       </h2>
-            <ul>
+        <div class="cocktail-details">
+            <h2 class="cocktail-headlines">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Analog_clock_animation.gif" class="title-icon">
+                <span class="label">Prep Time:</span> <span class="value">{{ data.prep_time }}</span>
+            </h2>
+            <h2 class="cocktail-headlines">
+                <img src="https://previews.123rf.com/images/yusuf1101/yusuf11012302/yusuf1101230200403/199426009-fresh-food-logo-icon-vector-food-logo-design-concept-food-logo-icon-template.jpg" class="title-icon">
+                <span class="label">Best Paired With:</span> <span class="value">{{ data.food_pairing }}</span>
+            </h2>
+            <h2 class="cocktail-headlines">
+                <img src="https://img.freepik.com/premium-vector/clink-glasses-champagne-graphic-icon-cheers-with-two-champagne-glasses-sign-isolated-white_532973-941.jpg?w=1060" class="title-icon">
+                <span class="label">Served In:</span> <span class="value">{{ data.glass_type }}</span>
+            </h2>
+            <h2 class="cocktail-headlines">
+                <img src="https://www.shutterstock.com/image-vector/vector-sketch-martini-glass-olives-260nw-227829139.jpg" alt="Ingredients Icon" class="title-icon">
+                Ingredients:
+            </h2>
+            <ul class="ingredients-list">
                 {% for ingredient in data.ingredients %}
                 <li>{{ ingredient }}</li>
                 {% endfor %}
-            </ul> <br>
-            <h2 class = "cocktail-headlines">
-             <img src="https://www.shutterstock.com/image-vector/shaker-icon-vector-illustration-600nw-500695585.jpg" alt="Preparation Icon" class="title-icon"> Preparation:
+            </ul>
+            <h2 class="cocktail-headlines">
+                <img src="https://www.shutterstock.com/image-vector/shaker-icon-vector-illustration-600nw-500695585.jpg" alt="Preparation Icon" class="title-icon">
+                Preparation:
             </h2>
-            <ol>
+            <ol class="ingredients-list">
                 {% for step in data.preparation_steps %}
                 <li>{{ step }}</li>
                 {% endfor %}
             </ol>
         </div>
-    </div> <br> <br>
-<div class="video-container">
-    <video controls>
-        <source src="{{ url_for('static', filename='videos/' + data.video) }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div> <br>
-
-<div class="button-group">
-    {% if quiz == 1 %}
-        <a href="/learn_menu" class="btn btn-primary">Go Back</a>
-    {% else %}
-        <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
-    {% endif %}
-    <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a> <!-- Moved up -->
-    {% if next_lesson %}
-        <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a> <!-- Moved down -->
-    {% endif %}
-</div>
-
+    </div> <br>
+    <div class="video-container">
+        <video controls>
+            <source src="{{ url_for('static', filename='videos/' + data.video) }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="button-group">
+        {% if quiz == 1 %}
+            <a href="/learn_menu" class="btn btn-primary">Go Back</a>
+        {% else %}
+            <a href="/learn/{{ previous_lesson }}" class="btn btn-primary">Go Back</a>
+        {% endif %}
+        <a href="/quiz/{{ quiz }}" class="btn btn-primary">Continue to Quiz</a>
+        {% if next_lesson %}
+            <a href="/learn/{{ next_lesson }}" class="btn btn-primary">Next Lesson</a>
+        {% endif %}
+    </div>
 </div>
 </body>
 </html>

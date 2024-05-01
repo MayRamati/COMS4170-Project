@@ -18,35 +18,42 @@ lessons = {
             "Drink!"
         ],
         "image": "learn8.jpeg",
-        "video": 'Old Fashioned.mp4'
+        "video": 'Old Fashioned.mp4',
+        "prep_time": "5 minutes",
+        "food_pairing": "Steak or dark chocolate desserts",
+        "glass_type": "Lowball glass"
     },
     2: {
         "name": "Sex on the Beach",
         "info": "A fruity cocktail made with vodka, peach schnapps, orange juice, and cranberry juice.",
-        "ingredients": ["Vodka", "peach schnapps", "Orange Juice", "Cranberry Juice", "Orange slice", "glace cherry", "Ice"],
+        "ingredients": ["Vodka", "Peach Schnapps", "Orange Juice", "Cranberry Juice", "Orange Slice", "Glace Cherry", "Ice"],
         "preparation_steps": [
             "Fill the glass with ice.",
-            "Pour some vodka, peach schnapps and fruit juices and stir.",
-            "Decorate with the cherry and orange slice",
+            "Pour in some vodka, peach schnapps, and fruit juices and stir.",
+            "Decorate with the cherry and orange slice.",
             "Salute!"
         ],
         "image": "learn7.jpeg",
-        "video": 'sex on the beach.mp4'
+        "video": 'sex on the beach.mp4',
+        "prep_time": "3 minutes",
+        "food_pairing": "Seafood or light pasta dishes",
+        "glass_type": "Highball glass"
     },
     3: {
         "name": "Classic Negroni",
         "info": "An iconic Italian cocktail made with gin, vermouth rosso, and Campari, garnished with an orange peel.",
-        "ingredients": ["Campari", "Gin", "Orange Juice", "Orange", "Ice"],
+        "ingredients": ["Campari", "Gin", "Vermouth Rosso", "Orange", "Ice"],
         "preparation_steps": [
-            "Pour in 3 shots of campari, 3 shots of gin into a glass or jug with ice.",
+            "Pour Campari, gin, and vermouth into a glass over ice.",
             "Stir well until the outside of the glass feels cold.",
-            "Fill with orange juice till ¾ of the glass is filled.",
-            "Add a large ice sphere.",
-            "Cut a slice of orange and lay it down inside the glass.",
-            "Call your friends!"
+            "Garnish with a slice of orange.",
+            "Serve immediately and enjoy."
         ],
         "image": "learn3.jpeg",
-        "video": 'Classic Negroni.mp4'
+        "video": 'Classic Negroni.mp4',
+        "prep_time": "5 minutes",
+        "food_pairing": "Appetizers like olives or Italian antipasti",
+        "glass_type": "Lowball glass"
     },
     4: {
         "name": "Sangaria",
@@ -58,10 +65,13 @@ lessons = {
             "Stir the mixture with ice.",
             "Pour in the wine and brandy.",
             "Top with sparkling water.",
-            "Enjoy! Relax on the couch"
+            "Enjoy! Relax on the couch."
         ],
         "image": "learn4.jpeg",
-        "video": 'Sangeria.mp4'
+        "video": 'Sangeria.mp4',
+        "prep_time": "10 minutes",
+        "food_pairing": "Spicy tapas or grilled sausages",
+        "glass_type": "Pitcher and wine glasses"
     },
     5: {
         "name": "Hot Toddy",
@@ -72,11 +82,14 @@ lessons = {
             "Add a cinnamon stick.",
             "Pour in boiling water.",
             "Add a splash of lemon juice.",
-            "Throw in a sliced lemon",
+            "Throw in a sliced lemon.",
             "Lay down and relax."
         ],
         "image": "learn6.jpeg",
-        "video": 'hot toddy.mp4'
+        "video": 'hot toddy.mp4',
+        "prep_time": "5 minutes",
+        "food_pairing": "Comfort foods like chicken soup or baked bread",
+        "glass_type": "Mug"
     }
 }
 
