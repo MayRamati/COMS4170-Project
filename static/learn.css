@@ -63,8 +63,8 @@ ul, ol {
 }
 
 .title-icon {
-    height: 40px;
-    margin-right: 10px;
+    height: 50px;
+    margin-right: 20px;
     vertical-align: middle;
 }
 
@@ -119,3 +119,4 @@ ul, ol {
 .ingredients-list li {
     font-size: 20px; /* Set the font size as desired */
 }
+
