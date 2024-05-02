@@ -30,7 +30,7 @@ h1 {
 .score {
     font-size: 70px;
     font-weight: bold;
-    color: #4A90E2; /* Change to a more dynamic color */
+    color: #4A90E2;
     margin: 20px 0;
     animation: scale-up 0.5s ease forwards;
 }

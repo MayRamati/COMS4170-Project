@@ -50,6 +50,7 @@ ul, ol {
 
 .btn {
     padding: 12px 24px;
+    transition: all 0.3s ease;
     font-size: 18px;
     border-radius: 5px;
     color: #fff;
@@ -60,6 +61,9 @@ ul, ol {
 
 .btn:hover {
     background-color: #F2DABD;
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for 3D effect */
+    cursor: pointer;
 }
 
 .title-icon {
@@ -120,10 +124,16 @@ ul, ol {
 }
 
 .btn.continue-quiz {
-    background-color: #BBAAA1;
+    background-color: #967969;
     color: white;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .btn.continue-quiz:hover {
-    background-color: #F2DABD;
+    background-color: #967969;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
