@@ -143,7 +143,7 @@ quizzes = {
             },
             {
                 'text': 'How many ice cubes are typically used in a Classic Negroni?',
-                'options': ['A large ice sphere', 'half full class', 'full', 'None'],
+                'options': ['A large ice sphere', 'half full glass', 'full', 'None'],
                 'answer': 'A large ice sphere'
             }
         ]
